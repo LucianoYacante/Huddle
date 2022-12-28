@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
+    
+
+}
+
+.hero{
+    
+    
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+    
+    
+    height: 100vh; /* para que el fondo de color ocupe todo el ancho*/
+    min-height: 650px;/* por si alguien llegara hacer el vw mas pequeño y evitar q se rompa*/
+}
+
+.hero-container{
+    
+    width: 90%;
+    max-width: 1200px; /*para que no rebase un ancho de 1200px*/
+    overflow: hidden; /*todo lo que salga de contenedor que salga*/
+    margin: 0 auto;
+    display: flex; /*para que el texto y la img se ponga una al lado de la otra*/
+    flex-direction: column;/* para que se ponga uno abajo del otro*/
+    justify-content: center;/*para centrarlo verticalmente*/
+    height: 100%; /* para que centre verticalmente los flex-items sino no lo hace*/
+}
+
+.hero-texts{
+    color: #fff;
+}
+
+.hero-title{
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.hero-copy{
+    line-height: 1.5;
+    margin: .5em 0;
+    text-align: center;
+    padding: 0.9em;
+}
+
+.hero-cta{
+    background-color: #fff;
+    text-decoration: none;
+    color: hsl(257, 40%, 49%);
+    padding: 0.6em 5em;
+    border-radius: 2em ;
+    font-size: 16px;
+    box-shadow: 0.2em 0.2em 1em rgb(68, 68, 68);
+    display: flex;
+    width: min-content;
+    margin: auto;
+   
+}
+
+.hero-cta:hover {
+ background-color:hsl(300, 69%, 71%) ;
+ color: #fff;
+}
+
+.hero-pic{
+    width: 90%;
+    max-width: 400px;/* siempre va a medrir un 90% pero que la imagen no rebase ese ancho*/
+    margin:0 auto;
+    margin-bottom: 40px;/*para que no se peguen la imagen y el texto*/
+    
+}
+
+.hero-img{ 
+    
+    width: 100%;
+    display: block;/*como la imagen es un elemento en linea deja un espacio para quitarlo con block*/
+}
+.hero-img1{
+    position: relative;
+    top: -2em;
+    right: 3px;
+    height: 2em;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 38px;
+}
+
+
+
+.hero-f{
+    height: 30px;
+    width: 30px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+.hero-f:hover {
+    border:1.5px solid hsl(300, 69%, 71%) ;
+    color:hsl(300, 69%, 71%) ;
+}
+
+.hero-i{
+    
+    height: 30px;
+    width: 30px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+    
+}
+.hero-i:hover {
+    border:1.5px solid hsl(300, 69%, 71%) ;
+    color:hsl(300, 69%, 71%) ;
+}
+.hero-t{
+    height: 30px;                                                       
+    width: 30px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    border: 1.5px solid white;
+   
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+      
+}
+
+.hero-t:hover {
+    border:1.5px solid hsl(300, 69%, 71%) ;
+    color:hsl(300, 69%, 71%) ;
+}
+
+@media (min-width:768px){
+    .hero-container{
+        flex-direction: row; /*cambia la dispocicion de la imgen y el texto pasa de coumna a fila*/
+        align-items: center;/* centrarlo verticalmente*/
+        justify-content: space-between; /*separa equitativamente el espacio*/
+    }
+
+    .hero-texts{
+        width: 50%; /*para achicar el texto y se vea mejor la img*/
+    }
+
+    .hero-pic{
+        width: 45%; /*antes habia un 90% y ahora la achicamos a la img para que quede proporcionado */
+        margin-bottom: 0; /*alinea la img con el texto */
+        
+    }
+    .hero-cta{
+        position: static;
+        padding: 0.8em 5em;
+        display: inline-block;
+        border-radius: 2em ;
+        font-size: 16px;
+    }
+    
+
+    .hero-title{
+        font-size: 2.5rem;/* aumentamos la letra del titulo*/
+        text-align: inherit;
+        
+    }
+
+    .hero-copy{
+        margin: .7em 0 1em; /*agrandar el margen de abajo y arriba*/
+        text-align: justify;
+        position: relative;
+        right: 15px;
+    }
+    .hero-img1{
+        position: relative;
+        top: -6em;
+        right: 6px;
+        height: 51px;
+    }
+    .iconos{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        top: 130px;
+    }
+    .hero-f{ 
+        position: relative;
+        right: 20px;}
+    .hero-i{
+        position: relative;
+        right: 10px;
+    }
+}
